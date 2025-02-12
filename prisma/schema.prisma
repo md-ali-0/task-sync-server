@@ -38,15 +38,17 @@ enum UserStatus {
 }
 
 model Task {
-  id        String       @id @default(cuid()) @db.VarChar(191)
-  title     String       @db.VarChar(255)
-  status    TaskStatus
-  date      DateTime
-  priority  TaskPriority
-  userId    String       @db.VarChar(191)
-  user      User?        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt DateTime     @default(now())
-  updatedAt DateTime     @updatedAt
+  id         String       @id @default(cuid()) @db.VarChar(191)
+  title      String       @db.VarChar(255)
+  status     TaskStatus
+  date       DateTime
+  priority   TaskPriority
+  userId     String       @db.VarChar(191)
+  user       User?        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  isDeleted  Boolean      @default(false)
+  Deleted_at DateTime?
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
 }
 
 enum TaskStatus {

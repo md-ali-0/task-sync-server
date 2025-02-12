@@ -27,6 +27,9 @@ const getAll = async (
             userId: user.user,
         });
     }
+    andCondions.push({
+        isDeleted: false,
+    });
 
     if (params.searchTerm) {
         andCondions.push({
@@ -116,9 +119,13 @@ const remove = async (id: string): Promise<Task | null> => {
         },
     });
 
-    const result = await prisma.task.delete({
+    const result = await prisma.task.update({
         where: {
             id,
+        },
+        data: {
+            isDeleted: true,
+            Deleted_at: new Date(),
         },
     });
 
@@ -127,8 +134,18 @@ const remove = async (id: string): Promise<Task | null> => {
 
 const getMonthName = (month: number) => {
     const months = [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
     ];
     return months[month] || "Unknown";
 };
@@ -172,13 +189,13 @@ const taskStatistics = async (user: IAuthUser) => {
         total,
     }));
 
-    return { 
+    return {
         total: {
             totalTasks,
             totalTasksCompleted,
             totalTasksInProgress,
-        }, 
-        formattedData 
+        },
+        formattedData,
     };
 };
 

@@ -1,42 +1,51 @@
-# Task Manager Web App
+# Task Management System
 
 ## 🚀 Project Overview
 
-Task Manager is a full-stack web application that allows users to **manage tasks** efficiently. It includes **user authentication, profile management, and full CRUD operations for tasks**. Built with **React/Next.js, Redux, Express/NestJS, and PostgreSQL/MySQL/MongoDB**, this app ensures a smooth and secure user experience.
+This **Task Management System** is a full-stack web application designed to help users efficiently **manage tasks**. It includes **user authentication, task creation and management, real-time updates, and advanced features** such as drag-and-drop reordering, role-based access control, and a responsive UI. Built with **ReactJS, NodeJS, Laravel, MySQL**, and **WebSocket** for real-time updates, this system provides a robust and user-friendly solution for task management.
 
 ## 📌 Features
 
 ### ✅ User Authentication & Profile Management
 
--   **Sign Up/Login** (JWT authentication)
+-   **Sign Up/Login** (JWT Authentication)
 -   **Forgot & Reset Password**
 -   **View and Edit Profile**
+-   **Role-based Access Control** (Admin vs User)
 
 ### ✅ Task Management (CRUD Operations)
 
 -   **Create, Read, Update, Delete Tasks**
--   **Task Filtering (Optional: By Status, Due Date)**
+-   **Task Filtering** (By Status, Due Date)
 -   **Task Pagination**
+-   **Drag-and-Drop Task Reordering** (using React Beautiful DnD)
+-   **Task Activity Log** (track creation, updates, and deletions)
+
+### ✅ Real-time Updates
+
+-   **Real-time Task Updates** (using WebSocket or polling)
 
 ### ✅ Additional Features
 
 -   **Responsive UI** (Tailwind CSS/Bootstrap)
+-   **Dark Mode Support**
 -   **Secure Password Hashing** (bcrypt)
--   **Middleware-Protected API Routes**
+-   **Caching** (Redis for performance optimization)
 
 ## 🛠 Tech Stack
 
-**Frontend:** React/Next.js, Redux, Tailwind CSS/Bootstrap  
-**Backend:** Express.js/NestJS, JWT, bcrypt  
-**Database:** PostgreSQL/MySQL/MongoDB  
-**State Management:** Redux Toolkit
+**Frontend:** ReactJS, Redux, Tailwind CSS, React Beautiful DnD  
+**Backend:** NodeJS (Express.js) or Laravel, JWT, WebSocket (Socket.io for real-time updates), bcrypt  
+**Database:** MySQL  
+**State Management:** Redux Toolkit  
+**Caching:** Redis
 
 ## 🚀 Installation & Setup
 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/md-ali-0/TaskSync.git
+git clone https://github.com/md-ali-0/task-sync.git
 cd task-manager
 ```
 
@@ -118,8 +127,8 @@ The app will be available at **`http://localhost:3000`**.
 
 ## 🚀 Deployment
 
--   **Frontend Deployment**: [Frontend Live URL](https://TaskSync-two-omega.vercel.app)
--   **Backend Deployment**: [Backend Live URL](https://TaskSync-server-nine.vercel.app)
+-   **Frontend Deployment**: [Frontend Live URL](https://task-sync-ashen.vercel.app)
+-   **Backend Deployment**: [Backend Live URL](https://task-sync-server-seven.vercel.app)
 
 ## 📜 License
 

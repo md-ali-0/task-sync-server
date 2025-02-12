@@ -13,13 +13,13 @@ const generateTokens = (user: { id: string; role: Role }) => {
     const accessToken = jwtHelpers.generateToken(
         { user: user.id, role: user.role },
         config.jwt.jwt_secret as Secret,
-        config.jwt.expires_in as string
+        Number(config.jwt.expires_in)
     );
 
     const refreshToken = jwtHelpers.generateToken(
         { user: user.id, role: user.role },
         config.jwt.refresh_token_secret as Secret,
-        config.jwt.refresh_token_expires_in as string
+        Number(config.jwt.refresh_token_expires_in)
     );
 
     return { accessToken, refreshToken };
@@ -100,7 +100,7 @@ const refreshToken = async (token: string) => {
     const accessToken = jwtHelpers.generateToken(
         { email: user.email, role: user.role },
         config.jwt.jwt_secret as Secret,
-        config.jwt.expires_in as string
+        Number(config.jwt.expires_in)
     );
 
     return { accessToken };
@@ -153,7 +153,7 @@ const forgotPassword = async (payload: { email: string }) => {
     const resetToken = jwtHelpers.generateToken(
         { email: user.email, role: user.role },
         config.jwt.reset_pass_secret as Secret,
-        config.jwt.reset_pass_token_expires_in as string
+        Number(config.jwt.reset_pass_token_expires_in)
     );
 
     const resetLink = `${config.reset_pass_link}?token=${resetToken}`;
