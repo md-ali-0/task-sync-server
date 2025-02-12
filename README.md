@@ -21,24 +21,21 @@ This **Task Management System** is a full-stack web application designed to help
 -   **Drag-and-Drop Task Reordering** (using React Beautiful DnD)
 -   **Task Activity Log** (track creation, updates, and deletions)
 
-### ✅ Real-time Updates
-
--   **Real-time Task Updates** (using WebSocket or polling)
-
 ### ✅ Additional Features
 
--   **Responsive UI** (Tailwind CSS/Bootstrap)
+-   **Responsive UI** (Tailwind CSS)
 -   **Dark Mode Support**
 -   **Secure Password Hashing** (bcrypt)
--   **Caching** (Redis for performance optimization)
 
 ## 🛠 Tech Stack
 
 **Frontend:** ReactJS, Redux, Tailwind CSS, React Beautiful DnD  
-**Backend:** NodeJS (Express.js) or Laravel, JWT, WebSocket (Socket.io for real-time updates), bcrypt  
+**Backend:** NodeJS (Express.js), JWT, bcrypt, Prisma ORM
 **Database:** MySQL  
-**State Management:** Redux Toolkit  
-**Caching:** Redis
+**State Management:** Redux Toolkit
+**Validation:** zod (Frontend + Backend)
+**Logging:** Winston
+
 
 ## 🚀 Installation & Setup
 
