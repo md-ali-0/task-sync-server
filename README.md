@@ -2,7 +2,7 @@
 
 ## 🚀 Project Overview
 
-This **Task Management System** is a full-stack web application designed to help users efficiently **manage tasks**. It includes **user authentication, task creation and management, real-time updates, and advanced features** such as drag-and-drop reordering, role-based access control, and a responsive UI. Built with **ReactJS, NodeJS, Laravel, MySQL**, and **WebSocket** for real-time updates, this system provides a robust and user-friendly solution for task management.
+This **Task Management System** is a full-stack web application designed to help users efficiently **manage tasks**. It includes **user authentication, task creation and management, real-time updates, and advanced features** such as drag-and-drop reordering, role-based access control, and a responsive UI. Built with **ReactJS, NodeJS, MySQL, Prisma**, this system provides a robust and user-friendly solution for task management.
 
 ## 📌 Features
 
